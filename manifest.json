@@ -11,7 +11,7 @@
         "version": "0.0.0.1",
         "changelog": "- first attempt at plugin",
         "targetAbi": "10.9.0.0",
-        "sourceUrl": "https://github.com/dkanada/jellyfin-plugin-intros/releases/download/v1.3.1/jellyfin-plugin-intros-v1.3.1.zip",
+        "sourceUrl": "https://github.com/soultaco83/Jellyfin_requests_plugin/releases/download/0.0.0.1/Jellyfin.Plugin.RequestsAddon.zip",
         "checksum": "3ea0e43f2dd565a109dec6b203b6cbc4",
         "timestamp": "2024-09-15T07:11:00Z"
       }
