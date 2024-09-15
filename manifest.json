@@ -1,0 +1,20 @@
+[
+  {
+    "guid": "b0bef419-e5b8-439d-a6a5-9b96949cbe7e",
+    "name": "RequestsAddon",
+    "overview": "Change request tab url",
+    "description": "Allows changing of the Request tab url.",
+    "owner": "Soultaco83",
+    "category": "Other",
+    "versions": [
+      {
+        "version": "0.0.0.1",
+        "changelog": "- first attempt at plugin",
+        "targetAbi": "10.9.0.0",
+        "sourceUrl": "https://github.com/dkanada/jellyfin-plugin-intros/releases/download/v1.3.1/jellyfin-plugin-intros-v1.3.1.zip",
+        "checksum": "3ea0e43f2dd565a109dec6b203b6cbc4",
+        "timestamp": "2024-09-15T07:11:00Z"
+      }
+    ]
+  }
+]
