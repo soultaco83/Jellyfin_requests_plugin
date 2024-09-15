@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>RequestsAddon</title>
+</head>
+<body>
+    <div id="RequestsAddonConfigPage" data-role="page" class="page type-interior pluginConfigurationPage" data-require="emby-input,emby-button,emby-select,emby-checkbox">
+        <div data-role="content">
+            <div class="content-primary">
+                <form id="RequestsAddonConfigForm">
+                    <div class="inputContainer">
+                        <label class="inputLabel inputLabelUnfocused" for="RequestsUrl">Requests URL</label>
+                        <input id="RequestsUrl" name="RequestsUrl" type="text" is="emby-input" />
+                        <div class="fieldDescription">Set the URL for requests tab, supports any site with iFrame support</div>
+                    </div>
+                    <div>
+                        <button is="emby-button" type="submit" class="raised button-submit block emby-button">
+                            <span>Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var RequestsAddonConfig = {
+                pluginUniqueId: 'b0bef419-e5b8-439d-a6a5-9b96949cbe7e'
+            };
+        
+            document.querySelector('#RequestsAddonConfigPage')
+                .addEventListener('pageshow', function() {
+                    Dashboard.showLoadingMsg();
+                    ApiClient.getPluginConfiguration(RequestsAddonConfig.pluginUniqueId).then(function (config) {
+                        document.querySelector('#RequestsUrl').value = config.RequestsUrl || "https://www.example.com";
+                        Dashboard.hideLoadingMsg();
+                    });
+                });
+        
+            document.querySelector('#RequestsAddonConfigForm')
+                .addEventListener('submit', function(e) {
+                Dashboard.showLoadingMsg();
+                ApiClient.getPluginConfiguration(RequestsAddonConfig.pluginUniqueId).then(function (config) {
+                    config.RequestsUrl = document.querySelector('#RequestsUrl').value || "https://www.example.com";
+                    ApiClient.updatePluginConfiguration(RequestsAddonConfig.pluginUniqueId, config).then(function (result) {
+                        Dashboard.processPluginConfigurationUpdateResult(result);
+                    });
+                });
+        
+                e.preventDefault();
+                return false;
+             });
+        </script>
+    </div>
+</body>
+</html>
