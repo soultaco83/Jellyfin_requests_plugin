@@ -5,6 +5,8 @@
 This is a plugin built with DotNet8, that will allow admins to set a url for the request tab.
 </p>
 
+Web UI: https://github.com/soultaco83/jellyfin-web-requeststab
+
 ## Install
 
 1. Open the dashboard in Jellyfin, then select `My Plugins` and open `Catalog` at the top.
