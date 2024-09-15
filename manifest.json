@@ -12,7 +12,7 @@
         "changelog": "- first attempt at plugin",
         "targetAbi": "10.9.0.0",
         "sourceUrl": "https://github.com/soultaco83/Jellyfin_requests_plugin/releases/download/0.0.0.1/Jellyfin.Plugin.RequestsAddon.zip",
-        "checksum": "3ea0e43f2dd565a109dec6b203b6cbc4",
+        "checksum": "eda0a6819cf2baf361732641e5f3abd9fe876b7d67f27cb082e207d2135e330a",
         "timestamp": "2024-09-15T07:11:00Z"
       }
     ]
