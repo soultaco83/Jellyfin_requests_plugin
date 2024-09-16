@@ -87,6 +87,38 @@ jobs:
         zip Jellyfin.Plugin.RequestsAddon.zip Jellyfin.Plugin.RequestsAddon.dll
         mv Jellyfin.Plugin.RequestsAddon.zip ../
 
+    - name: Calculate MD5
+      id: md5
+      run: |
+        checksum=$(md5sum Jellyfin.Plugin.RequestsAddon.zip | awk '{ print $1 }')
+        echo "MD5=$checksum" >> $GITHUB_ENV
+
+    - name: Update manifest.json
+      run: |
+        version="${RELEASE_TAG#v}"
+        timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+        jq --arg version "$version" \
+           --arg changelog "$RELEASE_NOTES" \
+           --arg sourceUrl "https://github.com/${{ github.repository }}/releases/download/$RELEASE_TAG/Jellyfin.Plugin.RequestsAddon.zip" \
+           --arg checksum "$MD5" \
+           --arg timestamp "$timestamp" \
+        '.[0].versions += [{
+          "version": $version,
+          "changelog": $changelog,
+          "targetAbi": "10.9.0.0",
+          "sourceUrl": $sourceUrl,
+          "checksum": $checksum,
+          "timestamp": $timestamp
+        }]' manifest.json > manifest_updated.json && mv manifest_updated.json manifest.json
+
+    - name: Commit and push updated manifest
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add manifest.json
+        git commit -m "Update manifest.json for version $RELEASE_TAG"
+        git push
+
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
