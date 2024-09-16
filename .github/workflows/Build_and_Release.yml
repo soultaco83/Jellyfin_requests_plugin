@@ -1,4 +1,4 @@
-name: Build and Release .NET Project
+name: Build and Release Jellyfin Plugin
 
 on:
   push:
@@ -82,7 +82,10 @@ jobs:
       run: dotnet publish --configuration Release --output ./publish
 
     - name: Zip artifact
-      run: zip -r Jellyfin_requests_plugin.zip ./publish
+      run: |
+        cd ./publish
+        zip Jellyfin.Plugin.RequestsAddon.zip Jellyfin.Plugin.RequestsAddon.dll
+        mv Jellyfin.Plugin.RequestsAddon.zip ../
 
     - name: Create Release
       id: create_release
@@ -102,6 +105,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./Jellyfin_requests_plugin.zip
-        asset_name: Jellyfin_requests_plugin.zip
+        asset_path: ./Jellyfin.Plugin.RequestsAddon.zip
+        asset_name: Jellyfin.Plugin.RequestsAddon.zip
         asset_content_type: application/zip
