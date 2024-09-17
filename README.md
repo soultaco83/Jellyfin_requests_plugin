@@ -19,7 +19,7 @@ https://raw.githubusercontent.com/soultaco83/Jellyfin_requests_plugin/master/man
 
 3. Select `Catalog` again and click on 'RequestsAddon' at the very bottom of the list. Install the most recent version.
 
-4. Restart Jellyfin and go back to the plugin settings. Select `Installed` at the top and then 'RequestsAddon' to configure.
+4. Restart Jellyfin and go back to the plugin settings. Select `My Plugins` on the left and then 'RequestsAddon' to configure the needed URL.
 
 ## Build
 
