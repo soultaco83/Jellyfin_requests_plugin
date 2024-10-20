@@ -47,6 +47,18 @@ jobs:
         fi
         echo "Release tag: ${{ env.RELEASE_TAG }}"
 
+    - name: Update Directory.Build.props
+      run: |
+        version="${RELEASE_TAG#v}"
+        sed -i 's/<Version>.*<\/Version>/<Version>'"$version"'<\/Version>/' Directory.Build.props
+        sed -i 's/<AssemblyVersion>.*<\/AssemblyVersion>/<AssemblyVersion>'"$version"'<\/AssemblyVersion>/' Directory.Build.props
+        sed -i 's/<FileVersion>.*<\/FileVersion>/<FileVersion>'"$version"'<\/FileVersion>/' Directory.Build.props
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add Directory.Build.props
+        git commit -m "Update version to $version in Directory.Build.props"
+        git push
+
     - name: Get previous release notes
       id: previous_release
       run: |
