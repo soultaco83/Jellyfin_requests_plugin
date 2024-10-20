@@ -7,6 +7,14 @@
     "owner": "Soultaco83",
     "category": "Other",
     "versions": [
+	 {
+        "version": "0.0.2",
+        "changelog": "Install plugin into jellyfin. Place into a folder called requests  This only functions if you have the custom webui installed.",
+        "targetAbi": "10.9.0.0",
+        "sourceUrl": "https://github.com/soultaco83/Jellyfin_requests_plugin/releases/download/v0.0.2/Jellyfin.Plugin.RequestsAddon.zip",
+        "checksum": "7bf46a1874295e3d584819119433d1da",
+        "timestamp": "2024-10-20T02:57:57Z"
+      },
       {
         "version": "0.0.1",
         "changelog": "Install plugin into jellyfin. Place into a folder called requests  This only functions if you have the custom webui installed.",
@@ -14,14 +22,6 @@
         "sourceUrl": "https://github.com/soultaco83/Jellyfin_requests_plugin/releases/download/v0.0.1/Jellyfin.Plugin.RequestsAddon.zip",
         "checksum": "b949ecdb9db27b14ca6e68db694effb3",
         "timestamp": "2024-09-16T07:48:21Z"
-      },
-      {
-        "version": "0.0.2",
-        "changelog": "Install plugin into jellyfin. Place into a folder called requests  This only functions if you have the custom webui installed.",
-        "targetAbi": "10.9.0.0",
-        "sourceUrl": "https://github.com/soultaco83/Jellyfin_requests_plugin/releases/download/v0.0.2/Jellyfin.Plugin.RequestsAddon.zip",
-        "checksum": "7bf46a1874295e3d584819119433d1da",
-        "timestamp": "2024-10-20T02:57:57Z"
       }
     ]
   }
