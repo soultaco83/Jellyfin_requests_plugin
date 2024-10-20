@@ -22,15 +22,7 @@
         "sourceUrl": "https://github.com/soultaco83/Jellyfin_requests_plugin/releases/download/v0.0.2/Jellyfin.Plugin.RequestsAddon.zip",
         "checksum": "7bf46a1874295e3d584819119433d1da",
         "timestamp": "2024-10-20T02:57:57Z"
-		},
-      {
-        "version": "0.0.3",
-        "changelog": "Updated the config page as this is now included in my docker image",
-        "targetAbi": "10.9.0.0",
-        "sourceUrl": "https://github.com/soultaco83/Jellyfin_requests_plugin/releases/download/v0.0.3/Jellyfin.Plugin.RequestsAddon.zip",
-        "checksum": "24b43ba252be6ff3f0a246d54c336ba5",
-        "timestamp": "2024-10-20T20:13:36Z"
-      }
+		}
     ]
   }
 ]
