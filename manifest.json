@@ -6,6 +6,7 @@
     "description": "Allows changing of the Request tab url.",
     "owner": "Soultaco83",
     "category": "Other",
+    "imageUrl": "https://raw.githubusercontent.com/soultaco83/Jellyfin_requests_plugin/master/logo.svg",
     "versions": [
       {
         "version": "0.0.1",
