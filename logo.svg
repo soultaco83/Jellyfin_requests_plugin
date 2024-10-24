@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 281">
+  <!-- URL bar background - using Jellyfin purple -->
+  <rect x="50" y="120" width="400" height="40" rx="20" fill="#7d3f98" stroke="#9b4ec3" stroke-width="1"/>
+  
+  <!-- Lock icon in light color for contrast -->
+  <circle cx="75" cy="140" r="8" fill="#ffffff"/>
+  <rect x="72" cy="136" width="6" height="6" rx="1" fill="#ffffff"/>
+  
+  <!-- URL text in white for contrast -->
+  <text x="95" y="145" font-family="Arial" font-size="14" fill="#ffffff">Request Items</text>
+</svg>
