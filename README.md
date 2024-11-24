@@ -2,7 +2,7 @@
 <h3 align="center">Part of the <a href="https://jellyfin.org">Jellyfin Project</a></h3>
 
 <p align="center">
-This is a plugin built with DotNet8, that will allow admins to set a url for the request tab.
+This is a plugin built with DotNet9, that will allow admins to set a url for the request tab.
 </br>
 prepacked in https://hub.docker.com/r/soultaco83/jellyfin_with_request
 </p>
