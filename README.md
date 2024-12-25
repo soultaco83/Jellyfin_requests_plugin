@@ -7,7 +7,8 @@ This is a plugin built with DotNet8, that will allow admins to set a url for the
 prepacked in https://hub.docker.com/r/soultaco83/jellyfin_with_request
 </p>
 </p>
-
+</br>
+This plugin will require the install of the custom Webui as well:
 Web UI: https://github.com/soultaco83/jellyfin-web-requeststab
 
 ## Install
