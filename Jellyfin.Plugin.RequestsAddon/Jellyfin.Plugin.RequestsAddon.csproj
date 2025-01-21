@@ -24,6 +24,8 @@
   <ItemGroup>
     <None Remove="Configuration\configPage.html" />
     <EmbeddedResource Include="Configuration\configPage.html" />
+	<None Remove="requests.js" />
+    <EmbeddedResource Include="requests.js" />
   </ItemGroup>
   
 </Project>
