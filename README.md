@@ -1,4 +1,6 @@
 <h1 align="center">Requests Tab Plugin</h1>
+Take a look at https://github.com/IAmParadox27/jellyfin-plugin-custom-tabs
+Appears they have done a better job
 <h3 align="center">Part of the <a href="https://jellyfin.org">Jellyfin Project</a></h3>
 
 <p align="center">
